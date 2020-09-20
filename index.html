@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+    integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <title>Skill Safari | Rock, Paper, Scissors</title>
+
+</head>
+
+<body>
+  <HEADER id="HEAD">
+    <div class="container border-white mt-3 p-2 text-white"
+      style="border: 1px solid rgba(255, 255, 255, 0.062);border-radius: 3%;">
+      <div class="row">
+        <div class="col-6 p-4" style="font-weight: bolder;">
+          <h4>ROCK</h4>
+          <h4>PAPER</h4>
+          <h4>SCISSORS</h4>
+        </div>
+        <div class="col-6 ">
+          <div class="ml-auto scoreBlock  my-3 mr-2 p-3 text-center text-dark bg-white" style="width: 10rem; height: 100px;">
+            <h6>Score</h6>
+             <div class="row">
+               <div class="col-6">
+                <h6> Your:</h6>
+                <span class="h4"  id="score">0</span>
+
+               </div>
+               <div class="col-6">
+                <h6>Comp:</h6>
+                <span class="h4"  id="compScore">0</span>
+
+               </div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </HEADER>
+  
+  <div class="section container ">
+    <div id="adjust" style="margin: 1rem  25%">
+      <div class="rounded-circle adjustSize p-2 text-center  mt-5  " id="paper">
+        <span class="paper-icon"> <i class="fa fa-hand-paper my-4" style="font-size:60px;color:black ; "></i></span>
+        <span class="scissors-icon" style="display: none;"><i class="fa fa-hand-scissors my-4"
+            style="font-size:60px;color:black ;  " id="scissors-icon"></i></span>
+        <span class="rock-icon" style="display: none;"><i class="fa fa-hand-rock my-4"
+            style="font-size:60px;color:black ; " id="rock-icon"></i></span>
+            <h5 id="yourDeck" class="text-white text-center pt-5" style="display: none;">Your Deck</h5>
+
+      </div>
+      <div class="rounded-circle adjustSize p-2 mt-5 text-center ml-5" id="Scissors">
+        <span class="paper-icon" style="display: none;"> <i class="fa fa-hand-paper my-4"
+            style="font-size:60px;color:black ; "></i></span>
+        <span class="scissors-icon"><i class="fa fa-hand-scissors my-4" style="font-size:60px;color:black ;  "
+            id="scissors-icon"></i></span>
+        <span class="rock-icon" style="display: none;"><i class="fa fa-hand-rock my-4"
+            style="font-size:60px;color:black ; " id="rock-icon"></i></span>
+            <h5 id="computerDeck" class="text-white text-center pt-5" style="display: none;">Computer Deck</h5>
+      </div>
+
+      <div class="rounded-circle adjustSize p-2 mt-5 ml-5 text-center" id="Rock">
+        <span class="paper-icon" style="display: none;"> <i class="fa fa-hand-paper my-4"
+            style="font-size:60px;color:black ; "></i></span>
+        <span class="scissors-icon" style="display: none;"><i class="fa fa-hand-scissors my-4"
+            style="font-size:60px;color:black ;  " id="scissors-icon"></i></span>
+        <span class="rock-icon"><i class="fa fa-hand-rock my-4" style="font-size:60px;color:black ; "
+            id="rock-icon"></i></span>
+      </div>
+    </div>
+  </div>
+ <div class="container" id="rules-block">
+  <div id="rules-butt">
+    <button data-toggle="modal" data-target="#modal" class="align-right btn btn-primary">Rules</button>
+  </div>
+ </div>
+  <div id="reset"  style="display: none;">
+    <div class="text-center">
+      <h4 id="won"class="text-white pb-2" style="display: none;">You Won</h4>
+      <h4 id="loss" class="text-white pb-2" style="display: none;">You Loss</h4>
+      <h4 id="draw" class="text-white pb-2" style="display: none;"> Draw</h4>
+      <button onclick="resetAll()"  class="btn btn-primary btn-lg" id="playAgain">PLAY AGAIN</button>
+    </div>
+  </div>
+  <div class="modal fade " id="modal" style="margin-top: 5vh;">
+    <div class="modal-dialog ">
+        <div class="modal-content ">
+            <div class="modal-header bg-primary">
+                <h4 class="modal-text ">RULES</h4>
+                <button class="close text-light btn-danger" data-dismiss="modal" type="button">&times;
+
+                </button>
+            </div>
+            <div class="modal-body bg-dark text-light p-2">
+                <ol>
+                  <li>Select Your Card Among 3 </li>
+                  <li>Selected Card Compare with Computer Card</li>
+                  <li>According The game Winner is Select </li>
+                  <li>Winner is Selected </li>
+
+                </ol>
+                <img src="images/image-rules.svg" class="img-fluid p-2" alt="">
+            </div>
+           
+
+        </div>
+    </div>
+</div>
+ 
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
+
+  <script src="java-script/script.js"></script>
+</body>
+
+</html>

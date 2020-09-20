@@ -1,0 +1,133 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1366px
+
+## Colors
+
+### Primary
+
+- Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
+- Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
+- Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%)
+- Lizard Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%)
+- Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%)
+
+### Neutral
+
+- Dark Text: hsl(229, 25%, 31%)
+- Score Text: hsl(229, 64%, 46%)
+- Header Outline: hsl(217, 16%, 45%)
+
+### Background
+
+- Radial Gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%)
+
+## Fonts
+
+- Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
+- Weights: 600, 700 */
+
+body{
+    background:hsl(214, 47%, 23%) ;
+}
+#paper
+{
+    display: inline-block;
+    border: 10px solid blue;
+    width: 10rem;
+    height: 10rem;
+    background-color: white;
+  
+    position: relative;
+}
+#Scissors
+{
+    display: inline-block;
+    margin-left: 10rem !important;
+    border: 10px solid yellow;
+    width: 10rem;
+    height: 10rem;
+    background-color: white;
+    position: absolute;
+    
+}
+#Rock
+{
+    display:block;
+    text-align: center !important;
+    border: 10px solid red;
+    width: 10rem;
+    height: 10rem;
+    background-color: white;
+    margin-bottom: 4rem !important;
+    position: absolute;
+    margin-left: 13rem !important;
+}
+
+/* #reset
+{
+    margin-left: 43rem !important;
+} */
+@media(max-width:991px)
+{
+ #adjust
+ {
+     margin:1rem 10% !important;
+ }
+
+}
+@media(max-width:767px)
+{
+    #adjust
+    {
+        margin:1rem 4% !important;
+    }
+}
+ @media(max-width:510px)
+{
+    #adjust
+    {
+        margin:1rem 9% !important;
+    }
+    .adjustSize
+    {
+        width: 7rem !important;
+        height: 7rem !important;
+        padding:0 1rem !important;
+    }
+    #Scissors
+    {
+        margin-left: 7rem !important;
+    }
+    #Rock
+    {
+        margin-left: 7rem !important;
+
+
+    }
+    
+} 
+@media(max-width:365px)
+{
+    .scoreBlock
+    {
+        width: 7rem !important;
+    }
+    #Scissors
+    {
+        margin-left: 5rem !important;
+    }
+    #adjust
+    {
+        margin:1rem 1% !important;
+    }
+}
+#rules-butt
+{
+    margin-top: 30vh ;
+}
